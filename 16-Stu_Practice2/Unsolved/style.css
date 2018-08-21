@@ -1,0 +1,86 @@
+body {
+    background: grey;
+    margin: 0px;
+}
+
+h1 {
+    font-family: sonsie one;
+    margin: 50px;
+    text-align: center;
+    color: white;
+    font-size: 21px;
+}
+
+section {
+    margin: 40px;
+    height: 60vh;
+    width: 70vh;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+}
+
+.box {
+    border-radius: 16px;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.new {
+    display: none;
+}
+
+.nullone,
+.nulltwo {
+    grid-column: span 1;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+    h1 {
+        text-align: left;
+        margin-top: 20px;
+    }
+    section {
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(9, 1fr);
+    }
+    .new {
+        display: initial;
+    }
+    .nullthree,
+    .nullfour,
+    .nullfive {
+        grid-column: span 1;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    h1 {
+        text-align: left;
+        margin-top: 20px;
+    }
+    .new {
+        display: initial;
+    }
+    section {
+        width: 90%;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(11, 1fr);
+    }
+    .nullone,
+    .nulltwo,
+    .nullthree,
+    .nullfour,
+    .nullfive {
+        grid-column: span 1;
+    }
+}
